@@ -15,7 +15,7 @@ const PictureCommentNotification = (props) => {
         )}
         <div className={s.time}>{data.time} ago</div>
       </div>
-      <a className={s["picture-link"]} href={data.picture_id}>
+      <a className={s["picture-link"]} href={`#${data.picture_id}`}>
         <img className={s.picture} src={data.picture_preview}></img>
       </a>
     </div>
