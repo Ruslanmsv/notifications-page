@@ -15,3 +15,4 @@
 .DS_Store
 .prettierignore
 .parcel-cache
+node_modules
