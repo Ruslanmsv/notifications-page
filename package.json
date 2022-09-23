@@ -1,0 +1,22 @@
+{
+  "source": "src/index.html",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "parcel-reporter-static-files-copy": "^1.4.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true
+    }
+  }
+}
