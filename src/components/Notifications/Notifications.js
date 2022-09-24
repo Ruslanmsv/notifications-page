@@ -2,11 +2,9 @@ import NotificationItem from "./NotificationItem/NotificationItem";
 import s from "./Notifications.module.css";
 
 const Notifications = (props) => {
-    console.log('calculatin number of newNotifications');
   const newNotifications = props.data.reduce((prev, item) => {
     return item.new_notification ? prev + 1 : prev;
   }, 0);
-  console.log('new notification: ' + newNotifications);
 
   return (
     <div className={s.container}>

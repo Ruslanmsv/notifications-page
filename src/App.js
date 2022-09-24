@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState }  from "react";
 import Notifications from "./components/Notifications";
 
 const data = [
@@ -24,6 +24,7 @@ const data = [
   },
   {
     id: "3",
+    new_notification: false,
     userpic: "images/avatar-jacob-thompson.webp",
     new_notification: true,
     type: "group join",
@@ -35,6 +36,7 @@ const data = [
   },
   {
     id: "4",
+    new_notification: false,
     userpic: "images/avatar-rizky-hasanuddin.webp",
     type: "message",
     user_name: "Rizky Hasanuddin",
@@ -46,6 +48,7 @@ const data = [
   },
   {
     id: "5",
+    new_notification: false,
     userpic: "images/avatar-kimberly-smith.webp",
     type: "comment",
     user_name: "Kimberly Smith",
@@ -56,6 +59,7 @@ const data = [
   },
   {
     id: "6",
+    new_notification: false,
     userpic: "images/avatar-nathan-peterson.webp",
     type: "reaction",
     user_name: "Nathan Peterson",
@@ -66,6 +70,7 @@ const data = [
   },
   {
     id: "7",
+    new_notification: false,
     userpic: "images/avatar-anna-kim.webp",
     type: "group left",
     user_name: "Anna Kim",
@@ -78,14 +83,9 @@ const data = [
 
 const App = () => {
   const [state, setState] = useState(data);
-  console.log("state is:");
-  console.log(state);
 
   const markAsReadHandler = (event) => {
     event.preventDefault();
-
-    console.log("in click handler");
-
     setState((prevState) => {
       return prevState.map((notification) => {
         return { ...notification, new_notification: false };
