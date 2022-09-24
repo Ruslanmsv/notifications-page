@@ -20,7 +20,13 @@ const NotificationItem = (props) => {
       ? "commented on your picture"
       : "";
 
-  const Userpic = () => <img className={s.userpic} src={data.userpic}></img>;
+  const Userpic = () => (
+    <img
+      className={s.userpic}
+      src={data.userpic}
+      alt={`${data.user_name} avatar`}
+    ></img>
+  );
   const UserName = () => (
     <a className={s["user-name"]} href={`#${data.user_id}`}>
       {data.user_name}
@@ -38,6 +44,15 @@ const NotificationItem = (props) => {
   );
   const Time = () => <div className={s.time}>{data.time} ago</div>;
   const Message = () => <div className={s.message}>{data.message}</div>;
+  const PicturePreview = () => (
+    <a className={s["picture-link"]} href={`#${data.picture_id}`}>
+      <img
+        className={s.picture}
+        src={data.picture_preview}
+        alt={`picture of ${data.user_name}`}
+      ></img>
+    </a>
+  );
 
   return (
     <li className={props.data.new_notification ? s["new-notification"] : ""}>
@@ -54,6 +69,7 @@ const NotificationItem = (props) => {
           <Time />
           {data.message && <Message />}
         </div>
+        {data.picture_preview && <PicturePreview />}
       </div>
     </li>
   );
