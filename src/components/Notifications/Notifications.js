@@ -7,7 +7,7 @@ const Notifications = (props) => {
   }, 0);
 
   return (
-    <div className={s.container}>
+    <main className={s.container}>
       <div className={s.header}>
         <h1 className={s.title}>Notifications</h1>
         <span className={s["new-notifications"]}>{newNotifications}</span>
@@ -23,7 +23,7 @@ const Notifications = (props) => {
           <NotificationItem key={item.id} data={item} />
         ))}
       </ul>
-    </div>
+    </main>
   );
 };
 
