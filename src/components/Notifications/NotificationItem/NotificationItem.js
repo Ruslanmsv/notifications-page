@@ -1,8 +1,6 @@
-import React from 'react';
 import s from "./NotificationItem.module.css";
 
 const NotificationItem = (props) => {
-  console.log('Notification Item execution');
   const type = props.data.type;
 
   const data = props.data;
@@ -61,4 +59,4 @@ const NotificationItem = (props) => {
   );
 };
 
-export default React.memo(NotificationItem);
+export default NotificationItem;
